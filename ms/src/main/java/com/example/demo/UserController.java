@@ -28,5 +28,10 @@ public class UserController {
         if(db_password!=null&&db_password.equals(user.getPassword()))return CommonResult.success(true);
         else return CommonResult.success(false);
     }
+
+    @GetMapping("demo")
+    public String demo() {
+        return "/demo.html";
+    }
 }
 
